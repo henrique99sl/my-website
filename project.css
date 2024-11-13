@@ -1,0 +1,413 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ed9121;
+    width: 100%;
+    height: 70px;
+    z-index: 1;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-right: 10%;
+   
+}
+
+.logo{
+    flex: 1 1 auto;
+    margin-left: 10%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+
+a{
+    margin: 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+
+
+}
+
+a:hover{
+    color: #000;
+}
+
+.banner-area{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+.movies-area, .series-area, .books-area, .genres-area, .about-area, .user-area {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 700px;
+
+}
+
+.text-part{
+    width: 65%;
+    height: 80%;
+}
+
+h1{
+    font-size: 50 px;
+    font-family: Audiowide;
+
+}
+
+
+p{
+    font-size: 24px;
+    line-height: 50px;
+
+}
+
+.movies-area, .books-area{
+    background: #fefefe;
+}
+
+.series-area, .about-area{
+    background: #a9a9a9;
+    color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.nav-button {
+    margin: 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Suaviza a transição de cor */
+    padding: 10px 15px; /* Adiciona espaço interno para parecer um botão */
+    border-radius: 5px; /* Arredonda as bordas */
+}
+
+.nav-button:hover {
+    color: #fff; /* Altere a cor do texto ao passar o cursor */
+    background-color: #000; /* Altere a cor do fundo ao passar o cursor */
+}
+
+
+/* Container dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo para o conteúdo do dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Estilo dos links dentro do dropdown */
+.dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Muda a cor de fundo dos links ao passar o mouse */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Mostra o dropdown quando o mouse passa por cima */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.icon {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+}
+
+.item h3 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #ffffff;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-container img {
+    width: 100%; /* Permite que a imagem ocupe toda a largura disponível */
+    max-width: 300px; /* Define um limite de largura */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.content-container h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.content-container p {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.content-container .trailer-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #ed9121;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.content-container .trailer-link:hover {
+    background-color: #e68a00;
+}
+
+
+#content {
+    padding: 20px;
+}
+
+#items-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    width: 250px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.item-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.item-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 10px;
+}
+
+.item-card .rating {
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.item-card .year {
+    color: #3498db;
+    font-style: italic;
+}
+
+
+/* Estilos específicos para as páginas de recomendações, gêneros e recentes */
+.recommended-page h1,
+.genre-page h1,
+.recent-page h1 {
+    margin-top: 50px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#items-container {
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Estilos para os cartões de itens */
+.recommended-page .item-card,
+.genre-page .item-card,
+.recent-page .item-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.recommended-page .item-card:hover,
+.genre-page .item-card:hover,
+.recent-page .item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.item-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.item-card .item-info {
+    padding: 10px;
+}
+
+.item-card h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.item-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Botões de gênero */
+.genre-page .genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.genre-page .genre-buttons button {
+    background-color: #ed9121;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.genre-page .genre-buttons button:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+/* Estilos adicionais específicos para recomendados */
+.recommended-page .item-card {
+    border: 2px solid #f3f3f3;
+    background-color: #fafafa;
+}
+
+.recommended-page .item-card:hover {
+    border-color: #ed9121;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos adicionais específicos para recentes */
+.recent-page .item-card {
+    border: 1px solid #ddd;
+    background-color: #fdfdfd;
+}
+
+.recent-page .item-card:hover {
+    border-color: #ed9121;
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .recommended-page h1,
+    .genre-page h1,
+    .recent-page h1 {
+        font-size: 2rem;
+    }
+
+    .item-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+

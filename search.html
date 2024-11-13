@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>StoryShow - Search</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="data.js" defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-page {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+        }
+
+        .search-page h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-top: 40px; /* Increased margin to push the title lower */
+            margin-bottom: 20px;
+            color: #ed9121;
+            text-transform: uppercase;
+        }
+
+        .search-container {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #search-bar {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        #search-bar:focus {
+            border-color: #ed9121;
+        }
+
+        #search-results {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .item-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .item-card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .item-card p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html" class="logo">StoryShow</a>
+    </div>
+    
+    <div class="search-page">
+        <h1>Search for Movies, Series, or Books</h1>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Type to search..." oninput="performSearch()">
+        </div>
+        <div id="search-results" class="items-grid"></div>
+    </div>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById('search-bar').value.toLowerCase();
+            const resultsContainer = document.getElementById('search-results');
+            resultsContainer.innerHTML = '';
+
+            if (query.trim() === '') {
+                resultsContainer.innerHTML = '<p>Please enter a search term.</p>';
+                return;
+            }
+
+            const allItems = [...data.movies, ...data.series, ...data.books];
+            const filteredItems = allItems.filter(item => {
+                const title = item.title ? item.title.toLowerCase() : '';
+                return title.includes(query);
+            });
+
+            if (filteredItems.length === 0) {
+                resultsContainer.innerHTML = '<p>No results found.</p>';
+                return;
+            }
+
+            filteredItems.forEach(item => {
+                resultsContainer.innerHTML += `
+                    <a href="template.html?item=${item.id}" class="item-card">
+                        <img src="${item.image}" alt="${item.title}">
+                        <div class="item-info">
+                            <h3>${item.title}</h3>
+                            <p class="description">${item.description ? item.description.substring(0, 100) : 'No description available'}...</p>
+                        </div>
+                    </a>
+                `;
+            });
+        }
+    </script>
+</body>
+</html>
+
+
