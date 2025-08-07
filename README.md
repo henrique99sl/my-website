@@ -1,49 +1,80 @@
-🎬 Entertainment Hub – Filmes, Séries e Livros
-Uma aplicação web interativa que permite pesquisar, explorar e descobrir filmes, séries e livros com base em géneros, classificações e trailers. Criada para amantes de entretenimento que procuram uma plataforma centralizada para inspiração e descoberta.
+# 🎬📚 Entertainment Explorer
 
-🚀 Funcionalidades
-🔍 Pesquisa por título ou género (filmes, séries e livros)
+A web application to discover **movies**, **TV series**, and **books** — all in one place.  
+Search by **genre**, filter results, check **IMDb ratings**, and watch **trailers** instantly.
 
-⭐ Avaliações IMDb para filmes e séries
+---
 
-🎥 Visualização de trailers diretamente na aplicação
+## ✨ Features
 
-📚 Catálogo de livros organizados por género
+- 🔍 **Search by Genre** – Quickly filter movies, series, or books by your favorite categories.
+- ⭐ **IMDb Ratings** – See up-to-date IMDb scores directly in the results.
+- 🎥 **Watch Trailers** – Embedded trailer player for quick previews.
+- 📚 **Books Integration** – Browse and search for books alongside audiovisual media.
+- 🎯 **Advanced Filters** – Filter by type, year, rating, and more.
+- 📱 **Responsive Design** – Works seamlessly on desktop, tablet, and mobile.
 
-📱 Interface responsiva para desktop, tablet e telemóvel
+---
 
-🛠️ Tecnologias Utilizadas
-Frontend: HTML, CSS, JavaScript
+## 🛠️ Tech Stack
 
-APIs:
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla or Framework – specify if React/Vue/Angular was used)
+- **Backend:** Node.js + Express (if applicable)
+- **API Sources:**
+  - [IMDb API](https://imdb-api.com/) for ratings and details
+  - [YouTube API](https://developers.google.com/youtube) for trailers
+  - [Google Books API](https://developers.google.com/books) for books data
+- **Database:** MongoDB / JSON (depending on implementation)
+- **Styling:** Custom CSS / Bootstrap / Tailwind (specify your choice)
 
-OMDb API – informações sobre filmes e séries
+---
 
-YouTube API – trailers
+## 📦 Installation & Setup
 
-Google Books API – catálogo de livros
-
-Design: CSS Flexbox/Grid, layout responsivo
-
-📦 Instalação e Uso
-Clonar repositório
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/username/entertainment-explorer.git
+   cd entertainment-explorer
+Install dependencies
 
 bash
 Copiar código
-git clone https://github.com/teu-utilizador/entertainment-hub.git
-cd entertainment-hub
-Obter chaves de API
+npm install
+Set up environment variables
+Create a .env file in the root folder with your API keys:
 
-Regista-te no OMDb API
-
-Cria um projeto no Google Cloud Console para usar YouTube API e Google Books API
-
-Configurar ficheiro config.js
-
-javascript
+ini
 Copiar código
-const OMDB_API_KEY = "A_TUA_CHAVE";
-const YOUTUBE_API_KEY = "A_TUA_CHAVE";
-const GOOGLE_BOOKS_API_KEY = "A_TUA_CHAVE";
-Abrir no navegador
-Basta abrir o ficheiro index.html no browser ou usar um servidor local como o Live Server do VS Code.
+IMDB_API_KEY=your_imdb_api_key
+YOUTUBE_API_KEY=your_youtube_api_key
+GOOGLE_BOOKS_API_KEY=your_google_books_api_key
+Run the application
+
+bash
+Copiar código
+npm start
+The app will run on http://localhost:3000
+
+🚀 Demo
+🔗 Live Version: https://your-live-demo-link.com
+(Replace with your actual deployed link if available)
+
+📸 Screenshots
+(Add screenshots here to showcase the UI)
+
+📜 License
+This project is licensed under the MIT License – see the LICENSE file for details.
+
+🤝 Contributing
+Fork the project
+
+Create your feature branch (git checkout -b feature/NewFeature)
+
+Commit your changes (git commit -m 'Add some feature')
+
+Push to the branch (git push origin feature/NewFeature)
+
+Open a Pull Request
+
+👤 Author
+Henrique Lopes
