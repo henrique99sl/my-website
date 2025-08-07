@@ -31,30 +31,40 @@ Search by **genre**, filter results, check **IMDb ratings**, and watch **trailer
 
 ## 📦 Installation & Setup
 
-1. **Clone the repository**
+1. **Clone the repository**  
    ```bash
    git clone https://github.com/username/entertainment-explorer.git
    cd entertainment-explorer
-Install dependencies
+   ```
+
+
+
+2. **Install Dependencies**  
+Next, install all the required Node.js packages:
 
 ```bash
-Copiar código
 npm install
-Set up environment variables
-Create a .env file in the root folder with your API keys:
+```
 
-ini
+
+3. **Configure Environment Variables**  
+Create a `.env` file in the root directory of the project. This file will store your API keys, which are essential for the application to function. You can obtain these keys from the respective API providers mentioned in the Tech Stack section.
+
+Add your keys to the `.env` file in the following format:
+
+```ini
 IMDB_API_KEY=your_imdb_api_key
 YOUTUBE_API_KEY=your_youtube_api_key
 GOOGLE_BOOKS_API_KEY=your_google_books_api_key
-Run the application
+
+```
+
+
+4. **Run the Application**  
+Finally, start the development server:
 
 ```bash
-Copiar código
 npm start
-The app will run on http://localhost:3000
+```
+The application will then be accessible in your web browser at http://localhost:3000.
 
-
-
-👤 Author
-Henrique Lopes
