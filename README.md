@@ -18,14 +18,14 @@ Search by **genre**, filter results, check **IMDb ratings**, and watch **trailer
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML5, CSS3, JavaScript (Vanilla or Framework – specify if React/Vue/Angular was used)
-- **Backend:** Node.js + Express (if applicable)
+- **Frontend:** HTML5, CSS3, JavaScript (Vanilla or Framework, React was used)
+- **Backend:** Node.js + Express 
 - **API Sources:**
   - [IMDb API](https://imdb-api.com/) for ratings and details
   - [YouTube API](https://developers.google.com/youtube) for trailers
   - [Google Books API](https://developers.google.com/books) for books data
 - **Database:** MongoDB / JSON (depending on implementation)
-- **Styling:** Custom CSS / Bootstrap / Tailwind (specify your choice)
+- **Styling:** Tailwind 
 
 ---
 
@@ -55,26 +55,7 @@ Copiar código
 npm start
 The app will run on http://localhost:3000
 
-🚀 Demo
-🔗 Live Version: https://your-live-demo-link.com
-(Replace with your actual deployed link if available)
 
-📸 Screenshots
-(Add screenshots here to showcase the UI)
-
-📜 License
-This project is licensed under the MIT License – see the LICENSE file for details.
-
-🤝 Contributing
-Fork the project
-
-Create your feature branch (git checkout -b feature/NewFeature)
-
-Commit your changes (git commit -m 'Add some feature')
-
-Push to the branch (git push origin feature/NewFeature)
-
-Open a Pull Request
 
 👤 Author
 Henrique Lopes
