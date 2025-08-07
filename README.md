@@ -37,20 +37,19 @@ Search by **genre**, filter results, check **IMDb ratings**, and watch **trailer
    cd entertainment-explorer
 Install dependencies
 
-bash
+```bash
 Copiar código
 npm install
 Set up environment variables
 Create a .env file in the root folder with your API keys:
 
 ini
-Copiar código
 IMDB_API_KEY=your_imdb_api_key
 YOUTUBE_API_KEY=your_youtube_api_key
 GOOGLE_BOOKS_API_KEY=your_google_books_api_key
 Run the application
 
-bash
+```bash
 Copiar código
 npm start
 The app will run on http://localhost:3000
